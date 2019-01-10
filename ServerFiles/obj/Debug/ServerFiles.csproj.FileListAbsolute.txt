@@ -1,0 +1,10 @@
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\ServerFiles.exe.config
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\ServerFiles.exe
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\ServerFiles.pdb
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Form1.resources
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Properties.Resources.resources
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.GenerateResource.cache
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.exe
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.pdb
