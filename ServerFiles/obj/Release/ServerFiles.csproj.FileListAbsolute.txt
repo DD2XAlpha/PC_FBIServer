@@ -7,3 +7,5 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.cspr
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.CoreCompileInputs.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.exe
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.pdb
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Help.resources
