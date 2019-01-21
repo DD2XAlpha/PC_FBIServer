@@ -45,6 +45,7 @@
             this.lblVersion = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cBoxRemember = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +90,7 @@
             this.txt3DS_IP.Name = "txt3DS_IP";
             this.txt3DS_IP.Size = new System.Drawing.Size(297, 20);
             this.txt3DS_IP.TabIndex = 4;
+            this.txt3DS_IP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt3DS_IP_KeyPress);
             // 
             // btnSelectFile
             // 
@@ -112,8 +114,9 @@
             // 
             this.txtHostIP.Location = new System.Drawing.Point(21, 165);
             this.txtHostIP.Name = "txtHostIP";
-            this.txtHostIP.Size = new System.Drawing.Size(216, 20);
+            this.txtHostIP.Size = new System.Drawing.Size(297, 20);
             this.txtHostIP.TabIndex = 7;
+            this.txtHostIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHostIP_KeyPress);
             // 
             // txtHostPort
             // 
@@ -121,10 +124,11 @@
             this.txtHostPort.Name = "txtHostPort";
             this.txtHostPort.Size = new System.Drawing.Size(297, 20);
             this.txtHostPort.TabIndex = 8;
+            this.txtHostPort.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHostPort_KeyPress);
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(102, 272);
+            this.btnStart.Location = new System.Drawing.Point(116, 268);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(110, 51);
             this.btnStart.TabIndex = 9;
@@ -139,7 +143,7 @@
             // lnkSteveice10
             // 
             this.lnkSteveice10.AutoSize = true;
-            this.lnkSteveice10.Location = new System.Drawing.Point(12, 355);
+            this.lnkSteveice10.Location = new System.Drawing.Point(12, 370);
             this.lnkSteveice10.Name = "lnkSteveice10";
             this.lnkSteveice10.Size = new System.Drawing.Size(176, 13);
             this.lnkSteveice10.TabIndex = 10;
@@ -160,7 +164,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(277, 355);
+            this.lblVersion.Location = new System.Drawing.Point(277, 370);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(60, 13);
             this.lblVersion.TabIndex = 12;
@@ -178,19 +182,31 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(243, 163);
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(327, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
+            this.button2.Size = new System.Drawing.Size(10, 10);
             this.button2.TabIndex = 14;
-            this.button2.Text = "This is not my IP";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cBoxRemember
+            // 
+            this.cBoxRemember.AutoSize = true;
+            this.cBoxRemember.Location = new System.Drawing.Point(21, 332);
+            this.cBoxRemember.Name = "cBoxRemember";
+            this.cBoxRemember.Size = new System.Drawing.Size(117, 17);
+            this.cBoxRemember.TabIndex = 15;
+            this.cBoxRemember.Text = "Remember my data";
+            this.cBoxRemember.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 377);
+            this.ClientSize = new System.Drawing.Size(349, 392);
+            this.Controls.Add(this.cBoxRemember);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.lblVersion);
@@ -233,6 +249,7 @@
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox cBoxRemember;
     }
 }
 

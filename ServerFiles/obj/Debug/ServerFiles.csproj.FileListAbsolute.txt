@@ -8,3 +8,5 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.CoreCompileInputs.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.exe
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.pdb
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\config.txt
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Help.resources

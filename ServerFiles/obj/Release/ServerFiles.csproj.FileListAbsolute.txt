@@ -1,11 +1,12 @@
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\ServerFiles.exe.config
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\ServerFiles.exe
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\ServerFiles.pdb
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Form1.resources
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Properties.Resources.resources
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.GenerateResource.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.CoreCompileInputs.cache
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.exe
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.pdb
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csprojAssemblyReference.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Help.resources
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\config.txt
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.exe.config
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.exe
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.pdb
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.exe
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.pdb

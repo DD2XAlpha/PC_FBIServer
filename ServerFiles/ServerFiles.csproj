@@ -7,7 +7,7 @@
     <ProjectGuid>{EA8460F4-E34E-4719-B653-98B54A6CA8E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ServerFiles</RootNamespace>
-    <AssemblyName>ServerFiles</AssemblyName>
+    <AssemblyName>PC FBI Server</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_qJc_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,9 +95,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="config.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\sendurls.py" />
     <Content Include="Files\servefiles.py" />
     <Content Include="Files\setup.py" />
+    <Content Include="icon_qJc_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
