@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title></title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        html {
+            background: url(img/back.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .tp {
+            margin-top: 10px;
+            margin-bottom: -8px;
+        }
+    </style>
+</head>
+
+<body class="">
+    <div class="container white tp">
+        <br>
+        <div class="row">
+            <div class="col s4 m2">
+                <img src="img/logo.png" class="responsive-img">
+            </div>
+            <div class="col s8 m8">
+                <br>
+                <h4>PC FBI Server</h4>
+            </div>
+            <div class="col s12 m2">
+                <br>
+                <br>
+                <a href="https://github.com/DD2XAlpha/PC_FBIServer/releases/download/1.2/PC.FBI.Server.rar" class="btn-floating btn-large waves-effect waves-light blue"><i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container white">
+        <div class="row">
+            <div class="col s12 blue-text">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test1">Description</a></li>
+                    <li class="tab col s3"><a href="#test2">Images</a></li>
+                    <li class="tab col s3 "><a href="#test3">History of versions</a></li>
+                    <li class="tab col s3"><a href="#test4">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div id="test1" class="col s12">
+                    <h3 class="red-text">PC FBI Server</h3>
+                    <h5>Make easier the installations of CIAs over the wifi!</h5>
+                    <p>PC FBI Server is a tool for Windows with Python that can send a CIA file over the wifi, so you don't need to take off your SD/micro SD of your 3DS, put it on your PC and the need of have the double amount of the CIA size that you are going to install, and it installs it automatically!</p>
+
+                    <p>Requisites to use</p>
+                    <ul>
+                        <li>-PC with Windows</li>
+                        <li>-Python 3 installed (you can download it from <a href="https://www.python.org/">here</a>)</li>
+                        <li>-3DS with FBI installed</li>
+                        <li>-Wifi connection (PC and 3DS should be on the same network)</li>
+                    </ul>
+                    <p><b>NOTE:</b> Make sure Python is a PATH variable, if you don't know how to do it see this <a href="https://appuals.com/fix-python-is-not-recognized-as-an-internal-or-external-command/">tutorial</a></p>
+                    <p>Size: 21Kb</p>
+                    <p><b>Check out my github!</b></p>
+                    <a href="https://github.com/DD2XAlpha" class="btn waves-effect waves-light black"><i class="fab fa-github"></i> Github</a>
+
+                </div>
+                <div id="test2" class="col s12">
+                    <center>
+                        <img src="img/img1.png">
+                    </center>
+                </div>
+                <div id="test3" class="col s12">
+                    <h3 class="red-text">Version 1.2</h3>
+                        Since I had problems with security, I removed the option to get the IP address by it self, but added some other things!
+                        <br>
+                        Also, for some reason the zip file tells you the download will be dangerous, but it is not. If you download the rar version it won't tell you that, but for any case you have the two options.
+                    <ul>
+                        <li>-Added new restrictions to the text boxes, it prevents you to write something incorrect.</li>
+                        <li>-Added the option to remember your data, so you don't have to write it again.</li>
+                        <li>-Now the program name is PC FBI Server.exe and not ServerFiles.exe, also it has Icon now!</li>
+                        
+                    </ul>
+                    <h3 class="red-text">Version 1.1</h3>
+                    
+                    <ul>
+                        <li>-Added help guide.</li>
+                        <li>-Now the program itself gets your PC IP.</li>
+                        <li>-Added links to the github official page.</li>
+                        <li>-Now the program alerts you in case the name of your cia file doesn't follow the rules, it detects spaces and special characters.</li>
+                    </ul>
+                    <h3 class="red-text">Version 1.0</h3>
+                    Initial release
+                </div>
+                
+                <div id="test4" class="col s12">
+                    <h3 class="red-text">Disclaimer</h3>
+                    <p>-This software and owner (DD2XALPHA) do not conscent or support in anyform piracy.</p>
+                    <p>-This software was made with the purpose of making easier to the users to install once again their own 3DS game's backups, or well Homebrew CIA files.</p>
+                    <p>-The person who uses this software is responsible of his/her/their actions.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+        $(document).ready(function() {
+            $('.tabs').tabs();
+        });
+    </script>
+</body>
+
+</html>
