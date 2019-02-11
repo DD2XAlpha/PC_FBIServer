@@ -10,3 +10,5 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.ex
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.pdb
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.exe
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.pdb
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\preferences.txt
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Preferences.resources
