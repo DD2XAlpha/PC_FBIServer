@@ -12,3 +12,47 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\PC FBI Server.exe
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\PC FBI Server.pdb
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Preferences.resources
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\preferences.txt
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.xml
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.CopyComplete
+E:\Source\ServerFiles\ServerFiles\bin\Debug\config.txt
+E:\Source\ServerFiles\ServerFiles\bin\Debug\preferences.txt
+E:\Source\ServerFiles\ServerFiles\bin\Debug\PC FBI Server.exe.config
+E:\Source\ServerFiles\ServerFiles\bin\Debug\PC FBI Server.exe
+E:\Source\ServerFiles\ServerFiles\bin\Debug\PC FBI Server.pdb
+E:\Source\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Source\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Source\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Source\ServerFiles\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.AssemblyReference.cache
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Form1.resources
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Help.resources
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Preferences.resources
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.Properties.Resources.resources
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.GenerateResource.cache
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.CoreCompileInputs.cache
+E:\Source\ServerFiles\ServerFiles\obj\Debug\ServerFiles.csproj.CopyComplete
+E:\Source\ServerFiles\ServerFiles\obj\Debug\PC FBI Server.exe
+E:\Source\ServerFiles\ServerFiles\obj\Debug\PC FBI Server.pdb
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\config.txt
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\preferences.txt
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\PC FBI Server.exe.config
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\PC FBI Server.exe
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\PC FBI Server.pdb
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\MaterialSkin.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Source\MaterialPCFServer\ServerFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.csproj.AssemblyReference.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.Form1.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.Help.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.Preferences.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.Properties.Resources.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.csproj.GenerateResource.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.csproj.CoreCompileInputs.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\ServerFiles.csproj.CopyComplete
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\PC FBI Server.exe
+E:\Source\MaterialPCFServer\ServerFiles\obj\Debug\PC FBI Server.pdb

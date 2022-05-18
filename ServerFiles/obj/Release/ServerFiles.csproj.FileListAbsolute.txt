@@ -2,7 +2,6 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Form
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Properties.Resources.resources
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.GenerateResource.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.CoreCompileInputs.cache
-C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csprojAssemblyReference.cache
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Help.resources
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\config.txt
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\PC FBI Server.exe.config
@@ -12,3 +11,29 @@ C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.ex
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\PC FBI Server.pdb
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\preferences.txt
 C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.Preferences.resources
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csproj.CopyComplete
+C:\Users\danie\source\repos\ServerFiles\ServerFiles\obj\Release\ServerFiles.csprojAssemblyReference.cache
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\config.txt
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\preferences.txt
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\PC FBI Server.exe.config
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\PC FBI Server.exe
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\PC FBI Server.pdb
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\MaterialSkin.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.xml
+E:\Source\MaterialPCFServer\ServerFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.csproj.AssemblyReference.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.Form1.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.Help.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.Preferences.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.Properties.Resources.resources
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.csproj.GenerateResource.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.csproj.CoreCompileInputs.cache
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\ServerFiles.csproj.CopyComplete
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\PC FBI Server.exe
+E:\Source\MaterialPCFServer\ServerFiles\obj\Release\PC FBI Server.pdb
