@@ -1,64 +1,64 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System;
+using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
-using System.IO;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Windows.Forms;
 
 namespace ServerFiles
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialForm
     {
         DataSet ds = new DataSet();
+        List<Queueing> queued = new List<Queueing>();
+        private readonly MaterialSkinManager materialSkinManager;
+        int actualOption = -1;
+        string directory;
+        string path;
+
         public Form1()
         {
             InitializeComponent();
-        }
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal500 : Primary.Indigo500,
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal700 : Primary.Indigo700,
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal200 : Primary.Indigo100,
+                        Accent.Pink200,
+                        TextShade.WHITE);
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-
-            if (cBoxRemember.Checked)
-            {
-                string savedInfo = "true," + txt3DS_IP.Text + "," + txtHostIP.Text + "," + txtHostPort.Text;
-                File.WriteAllText(@"config.txt", savedInfo);
-            }
-            string strCmdText;
-            strCmdText = "/k python servefiles.py " + txt3DS_IP.Text + " \"" + txtFileDirectory.Text + "\" " + txtHostIP.Text + " " + txtHostPort.Text;
-            Process.Start("CMD.exe", strCmdText);
-
-        }
-
-        private void btnSelectFile_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "cia File|*.cia|All|*.*";
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog1.FileName;
-                txtFileDirectory.Text = file;
-            }
-            Cover();
         }
 
         private void lnkSteveice10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Steveice10/FBI");
+            Process.Start("https://github.com/Steveice10/FBI");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
+            txtHostPort.Text = "5000";
+
             ReadXML();
-            //REMOVED BECAUSE OF SECURITY
 
-            //string hostName = Dns.GetHostName(); // Retrive the Name of HOST
 
-            //IPHostEntry hostEntry = Dns.GetHostEntry(hostName);
-            //IPAddress[] addr = hostEntry.AddressList;
-            //var ip = addr.Where(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-            //             .FirstOrDefault();
-            //txtHostIP.Enabled = false;
-            //txtHostIP.Text = ip.ToString(); //Writes the PC IP by itself.
+            string hostName = Dns.GetHostName(); // Retrive the Name of HOST
+
+            IPHostEntry hostEntry = Dns.GetHostEntry(hostName);
+            IPAddress[] addr = hostEntry.AddressList;
+            var ip = addr.Where(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                         .FirstOrDefault();
+
+            txtHostIP.Text = ip.ToString(); //Writes the PC IP by itself.
 
             TextReader config = new StreamReader(@"config.txt");
             string f = config.ReadLine();
@@ -69,7 +69,7 @@ namespace ServerFiles
             }
             else //Otherwise it reads the saved data
             {
-                cBoxRemember.Checked = true;
+                cRememberMyData.Checked = true;
                 txt3DS_IP.Text = trimedConfiguration[1];
                 txtHostIP.Text = trimedConfiguration[2];
                 txtHostPort.Text = trimedConfiguration[3];
@@ -108,27 +108,7 @@ namespace ServerFiles
                 e.Handled = true;
             }
         }
-
-        //Host IP textbox control
-        private void txtHostIP_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar)
-                && !char.IsDigit(e.KeyChar)
-                        && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-        }
-
-        //Host Port textbox control
-        private void txtHostPort_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
+      
         //Read XML Database: Provided by 3dsdb.com
         private void ReadXML()
         {
@@ -146,41 +126,37 @@ namespace ServerFiles
         }
 
         //Show cover and info of the CIA, by looking in the XML file by the CIA titleID
-        private void Cover()
+        private void Cover(string path)
         {
+            ProcessStartInfo startInfo = new ProcessStartInfo()
+            {
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                FileName = "CMD.exe",
+                Arguments = "/c python titleID.py \"" + path + "\"",   //Since the extraction of the titleID is a python Script, it need to be called [Python 3]
+                CreateNoWindow = true
+            };
+
             Process process = new Process();
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.UseShellExecute = false;
-            startInfo.RedirectStandardOutput = true;
-            startInfo.FileName = "CMD.exe";
-            //Since the extraction of the titleID is a python Script, it need to be called [Python 3]
-            startInfo.Arguments = "/c python titleID.py \"" + txtFileDirectory.Text + "\"";
-            startInfo.CreateNoWindow = true;
             process.StartInfo = startInfo;
-            //The CMD window will not appear
-            process.StartInfo.CreateNoWindow = true;
             process.Start();
-            //Capture the data of the output in the CMD
-            string output = process.StandardOutput.ReadToEnd();
-            //Since it prints more than just the titleID, it splits the string to get trimed[1] wich is the titleID 
-            string[] trimed = output.Split('|');
+
+            string output = process.StandardOutput.ReadToEnd(); //Capture the data of the output in the CMD
+            string[] trimed = output.Split('|'); //Since it prints more than just the titleID, it splits the string to get trimed[1] wich is the titleID 
+
             process.WaitForExit(1);
-            //DataTable creation for the XML file and filtering
-            DataTable dt = new DataTable();
+
             TextReader preferences = new StreamReader(@"preferences.txt");
             string p = preferences.ReadLine();
             string[] trimedPreferences = p.Split(',');
             preferences.Close();
-            dt = ds.Tables["release"].Clone();
-
-
             //The XML file contains all the titlesID in upper case, so it must be in upper case
             string titleID = "";
             try
             {
                 titleID = trimed[1].ToUpper();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 goto finish;
             }
@@ -197,30 +173,37 @@ namespace ServerFiles
                     string region = row["region"].ToString();
                     try
                     {
-                        if (region == "USA")
-                            picBox.Load("https://art.gametdb.com/3ds/box/US/" + picSerial[1] + ".png");
-                        if (region == "EUR")
-                            try
-                            {
-                                picBox.Load("https://art.gametdb.com/3ds/box/" + trimedPreferences[0] + "/" + picSerial[1] + ".png");
-                            }
-                            catch(Exception ex)
-                            {
-                                picBox.Load("https://art.gametdb.com/3ds/box/EN/" + picSerial[1] + ".png");
-                            }
-                                
-                            if (region == "JPN")
-                            picBox.Load("https://art.gametdb.com/3ds/box/JA/" + picSerial[1] + ".png");
-                        if (region == "KOR")
-                            picBox.Load("https://art.gametdb.com/3ds/box/KO/" + picSerial[1] + ".png");
-                        if (region == "TWN")
-                            picBox.Load("https://art.gametdb.com/3ds/box/ZH/" + picSerial[1] + ".png");
-                        if (region == "CHN")
-                            picBox.Load("https://art.gametdb.com/3ds/box/ZHCN/" + picSerial[1] + ".png");
-                        if (region == "")
-                            picBox.ImageLocation = @"cover\error.png";
+
+                        switch (region)
+                        {
+                            case "USA":
+                                picBox.LoadAsync("https://art.gametdb.com/3ds/box/US/" + picSerial[1] + ".png");
+                                break;
+                            case "EUR":
+                                try
+                                {
+                                    picBox.LoadAsync("https://art.gametdb.com/3ds/box/" + trimedPreferences[0] + "/" + picSerial[1] + ".png");
+                                }
+                                catch (Exception)
+                                {
+                                    picBox.LoadAsync("https://art.gametdb.com/3ds/box/EN/" + picSerial[1] + ".png");
+                                }
+                                break;
+                            case "JPN":
+                                picBox.LoadAsync("https://art.gametdb.com/3ds/box/JA/" + picSerial[1] + ".png");
+                                break;
+                            case "KOR":
+                                picBox.LoadAsync("https://art.gametdb.com/3ds/box/KO/" + picSerial[1] + ".png");
+                                break;
+                            case "CHN":
+                            case "TWN":
+                                picBox.LoadAsync("https://art.gametdb.com/3ds/box/ZH/" + picSerial[1] + ".png");
+                                break;
+                            default: picBox.ImageLocation = @"cover\error.png"; break;
+
+                        }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         picBox.ImageLocation = @"cover\error.png";
                     }
@@ -259,15 +242,124 @@ namespace ServerFiles
             preferences.Show();
         }
 
-        private void lnk3dsdb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("http://3dsdb.com/");
-        }
-
         private void picBox3dsdb_Click(object sender, EventArgs e)
         {
             Process.Start("http://3dsdb.com/");
         }
-    }
 
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.ColumnIndex.Equals(0) && e.RowIndex != -1)
+                if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.Value != null)
+                    Cover(path + "\\" + dataGridView1.CurrentCell.Value.ToString());
+        }
+      
+        private void btnSelectFile_Click_1(object sender, EventArgs e)
+        {
+            // Show the FolderBrowserDialog.
+            openFileDialog1.Filter = "cia File|*.cia|All|*.*";
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                txtFileDirectory.Text = file;
+            }
+            Cover(txtFileDirectory.Text);
+            actualOption = 1; //Set for knowing that the user selected only on Cia
+        }
+
+        private void btnFolder_Click(object sender, EventArgs e)
+        {
+            var openFolder = new CommonOpenFileDialog();
+            openFolder.AllowNonFileSystemItems = true;
+            openFolder.Multiselect = true;
+            openFolder.IsFolderPicker = true;
+            openFolder.Title = "Select folders with cia files";
+
+            if (openFolder.ShowDialog() != CommonFileDialogResult.Ok)
+            {
+                return;
+            }
+
+            // get all the directories in selected dirctory
+            var dirs = openFolder.FileNames.ToArray();
+            foreach (var u in dirs)
+            {
+                //MessageBox.Show(u);
+                txtFileDirectory.Text = u;
+                directory = u;
+            }
+            string[] files = Directory.GetFiles(directory);
+            string[] wantedExtensions = { ".cia", ".CIA" }; // you can extend it  
+
+            List<Queueing> qList = new List<Queueing>();
+
+            foreach (string item in files)
+            {
+                string ext = Path.GetExtension(item);
+                if (wantedExtensions.Contains<string>(ext))
+                {
+                    string fullPath = item;
+                    int indx = fullPath.LastIndexOf('\\');
+                    path = fullPath.Substring(0, indx);
+                    string game = fullPath.Substring(indx + 1);
+
+                    FileInfo fi = new FileInfo(fullPath);
+
+                    qList.Add(new Queueing()
+                    {
+                        Game = game,
+                        Size = (fi.Length / 1048576) + " MB",
+                        State = false
+                    }); 
+                }
+
+            }
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = qList;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(1, 50, 50, 50);
+            actualOption = 2;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+                row.DefaultCellStyle.BackColor = Color.FromArgb(1, 50, 50, 50);
+        }
+
+        private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStartM_Click_1(object sender, EventArgs e)
+        {
+            if (actualOption == -1) 
+            { 
+                MaterialDialog materialDialog = new MaterialDialog(this, "One problem", "You haven't selected any CIA file!");
+                DialogResult result = materialDialog.ShowDialog(this);
+                return; 
+            }
+
+            if (cRememberMyData.Checked)
+            {
+                string savedInfo = "true," + txt3DS_IP.Text + "," + txtHostIP.Text + "," + txtHostPort.Text;
+                File.WriteAllText(@"config.txt", savedInfo);
+            }
+
+            string old = txtFileDirectory.Text;
+
+            if (actualOption == 2)
+            {
+                
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                    if (row.Cells[2].Value.ToString() != "False")
+                        txtFileDirectory.Text += path + "\\" + row.Cells[0].Value.ToString() + "|";
+                txtFileDirectory.Text = txtFileDirectory.Text + directory;
+            }
+
+            string strCmdText = "/k python servefiles.py " + txt3DS_IP.Text + " \"" + txtFileDirectory.Text + "\" " + txtHostIP.Text + " " + txtHostPort.Text;
+            Process.Start("CMD.exe", strCmdText);
+            txtFileDirectory.Text = old;
+        }
+    }
 }

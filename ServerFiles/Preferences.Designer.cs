@@ -42,9 +42,11 @@
             this.rBtnFR = new System.Windows.Forms.RadioButton();
             this.rBtnSP = new System.Windows.Forms.RadioButton();
             this.rBtnEn = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.Save = new MaterialSkin.Controls.MaterialButton();
+            this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.panel2.Controls.Add(this.rBtnFR);
             this.panel2.Controls.Add(this.rBtnSP);
             this.panel2.Controls.Add(this.rBtnEn);
-            this.panel2.Location = new System.Drawing.Point(12, 23);
+            this.panel2.Location = new System.Drawing.Point(73, 163);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 171);
             this.panel2.TabIndex = 4;
@@ -198,42 +200,87 @@
             this.rBtnEn.Text = "England";
             this.rBtnEn.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "PAL/EUR cover preferences";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 197);
+            this.label3.Location = new System.Drawing.Point(8, 348);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(223, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "If the cover isn\'t found, it will display EN cover";
             // 
-            // btnSave
+            // Save
             // 
-            this.btnSave.Location = new System.Drawing.Point(71, 222);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.Save.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Save.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.Save.Depth = 0;
+            this.Save.HighEmphasis = true;
+            this.Save.Icon = null;
+            this.Save.Location = new System.Drawing.Point(288, 396);
+            this.Save.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Save.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Save.Name = "Save";
+            this.Save.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.Save.Size = new System.Drawing.Size(64, 36);
+            this.Save.TabIndex = 7;
+            this.Save.Text = "Save";
+            this.Save.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.Save.UseAccentColor = false;
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // materialSwitch1
+            // 
+            this.materialSwitch1.AutoSize = true;
+            this.materialSwitch1.Checked = true;
+            this.materialSwitch1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.materialSwitch1.Depth = 0;
+            this.materialSwitch1.Location = new System.Drawing.Point(217, 75);
+            this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSwitch1.Name = "materialSwitch1";
+            this.materialSwitch1.Ripple = true;
+            this.materialSwitch1.Size = new System.Drawing.Size(135, 37);
+            this.materialSwitch1.TabIndex = 8;
+            this.materialSwitch1.Text = "Dark Mode";
+            this.materialSwitch1.UseVisualStyleBackColor = true;
+            this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(8, 84);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(93, 19);
+            this.materialLabel1.TabIndex = 9;
+            this.materialLabel1.Text = "Theme (WIP)";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(11, 128);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(188, 19);
+            this.materialLabel2.TabIndex = 10;
+            this.materialLabel2.Text = "PAL/EUR Cover preference";
             // 
             // Preferences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 253);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(359, 441);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.materialSwitch1);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Name = "Preferences";
             this.Text = "Preferences";
@@ -252,16 +299,18 @@
         private System.Windows.Forms.RadioButton rBtnFR;
         private System.Windows.Forms.RadioButton rBtnSP;
         private System.Windows.Forms.RadioButton rBtnEn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rBtnPT;
         private System.Windows.Forms.RadioButton rBtnNE;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.RadioButton rBtnFI;
         private System.Windows.Forms.RadioButton rBtnDK;
         private System.Windows.Forms.RadioButton rBtnNO;
         private System.Windows.Forms.RadioButton rBtnSE;
         private System.Windows.Forms.RadioButton rBtnAU;
         private System.Windows.Forms.RadioButton rBtnRU;
+        private MaterialSkin.Controls.MaterialButton Save;
+        private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

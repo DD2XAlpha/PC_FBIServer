@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +13,15 @@ using System.Windows.Forms;
 
 namespace ServerFiles
 {
-    public partial class Preferences : Form
+    public partial class Preferences : MaterialForm
     {
+        private readonly MaterialSkinManager materialSkinManager;
         public Preferences()
         {
             InitializeComponent();
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
         }
 
         private void Preferences_Load(object sender, EventArgs e)
@@ -24,40 +30,29 @@ namespace ServerFiles
             string p = preferences.ReadLine();
             string[] trimedPreferences = p.Split(',');
 
-            if (trimedPreferences[0] == "EN")
-                rBtnEn.Checked = true;
-            if (trimedPreferences[0] == "ES")
-                rBtnSP.Checked = true;
-            if (trimedPreferences[0] == "FR")
-                rBtnFR.Checked = true;
-            if (trimedPreferences[0] == "IT")
-                rBtnIT.Checked = true;
-            if (trimedPreferences[0] == "PT")
-                rBtnEn.Checked = true;
-            if (trimedPreferences[0] == "NE")
-                rBtnNE.Checked = true;
-            if (trimedPreferences[0] == "DE")
-                rBtnDE.Checked = true;
-            if (trimedPreferences[0] == "FI")
-                rBtnFI.Checked = true;
-            if (trimedPreferences[0] == "DK")
-                rBtnEn.Checked = true;
-            if (trimedPreferences[0] == "AU")
-                rBtnAU.Checked = true;
-            if (trimedPreferences[0] == "NO")
-                rBtnEn.Checked = true;
-            if (trimedPreferences[0] == "RU")
-                rBtnRU.Checked = true;
-            if (trimedPreferences[0] == "SE")
-                rBtnSE.Checked = true;
+            switch (trimedPreferences[0])
+            {
+                case "EN": rBtnEn.Checked = true; break;
+                case "ES": rBtnSP.Checked = true; break;
+                case "FR": rBtnFR.Checked = true; break;
+                case "IT": rBtnIT.Checked = true; break;
+                case "PT": rBtnPT.Checked = true; break;
+                case "NE": rBtnNE.Checked = true; break;
+                case "DE": rBtnDE.Checked = true; break;
+                case "FI": rBtnFI.Checked = true; break;
+                case "DK": rBtnDK.Checked = true; break;
+                case "AU": rBtnAU.Checked = true; break;
+                case "NO": rBtnNO.Checked = true; break;
+                case "RU": rBtnRU.Checked = true; break;
+                case "SE": rBtnSE.Checked = true; break;
+            }
             preferences.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
             string lang = "";
-           
+
             if (rBtnEn.Checked)
                 lang = "EN";
             if (rBtnSP.Checked)
@@ -86,8 +81,22 @@ namespace ServerFiles
                 lang = "SE";
             string savedInfo = lang + "," + "BOX";
             File.WriteAllText(@"preferences.txt", savedInfo);
-            MessageBox.Show("Saved!");
+            MaterialDialog materialDialog = new MaterialDialog(this, "Ok!", "Saved!");
+            DialogResult result = materialDialog.ShowDialog(this);
             Close();
+        }
+
+        private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            materialSkinManager.Theme = materialSwitch1.Checked ? MaterialSkinManager.Themes.DARK : MaterialSkinManager.Themes.LIGHT;
+
+            materialSkinManager.ColorScheme = new ColorScheme(
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal500 : Primary.Indigo500,
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal700 : Primary.Indigo700,
+                        materialSkinManager.Theme == MaterialSkinManager.Themes.DARK ? Primary.Teal200 : Primary.Indigo100,
+                        Accent.Pink200,
+                        TextShade.WHITE);
         }
     }
 }
