@@ -69,7 +69,7 @@ else:
     else:
         target_ip = sys.argv[1]
         target_path = sys.argv[2]
-        
+    
         if len(sys.argv) >= 4:
             hostIp = sys.argv[3]
             if len(sys.argv) == 5:
@@ -79,9 +79,9 @@ else:
             hostIp = [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]
 
 target_path = target_path.strip()
-if not os.path.exists(target_path):
-    print(target_path + ': No such file or directory.')
-    sys.exit(1)
+#if not os.path.exists(target_path):
+    #print(target_path + ': No such file or directory.')
+    #sys.exit(1)
 
 
 print('Preparing data...')
@@ -94,13 +94,23 @@ if os.path.isfile(target_path):
     else:
         print('Unsupported file extension. Supported extensions are: ' + accepted_extension)
         sys.exit(1)
-
+#IMPORTANT TO TAKE #################################################################
 else:
-    directory = target_path  # it's a directory
+   
     file_list_payload = ''  # init the payload before adding lines
-    for file in [file for file in next(os.walk(target_path))[2] if file.endswith(accepted_extension)]:
-        file_list_payload += baseUrl + quote(file) + '\n'
+    array = target_path.split('|')
+    directory = array[-1]  # it's a directory
+    del array[-1]
+    for var in array:
+        file_list_payload += baseUrl + quote(os.path.basename(var)) + '\n'
 
+    
+
+    #for file in [file for file in next(os.walk(target_path))[2] if file.endswith(accepted_extension)]:
+        #file_list_payload += baseUrl + quote(file) + '\n'
+
+    
+#IMPORTANT ##########################################################################
 if len(file_list_payload) == 0:
     print('No files to serve.')
     sys.exit(1)
@@ -128,7 +138,7 @@ try:
     print('Sending URL(s) to ' + target_ip + ' on port 5000...')
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect((target_ip, 5000))
-    sock.sendall(struct.pack('!L', len(file_list_payloadBytes)) + file_list_payloadBytes)
+    sock.sendall(struct.pack('!L', len(file_list_payloadBytes)) + file_list_payloadBytes)#####SEE
     while len(sock.recv(1)) < 1:
         time.sleep(0.05)
     sock.close()

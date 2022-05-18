@@ -45244,10 +45244,10 @@
 	<imagesize>16384</imagesize>
 	<serial>CTR-AWXA</serial>
 	<titleid>00040000001D1C00</titleid>
-	<imgcrc></imgcrc>
+	<imgcrc>CF76BE81</imgcrc>
 	<filename>jrp-wg</filename>
 	<releasename>Warioware_Gold_JPN_3DS-JRP</releasename>
-	<trimmedsize>0</trimmedsize>
+	<trimmedsize>2147483648</trimmedsize>
 	<firmware>11.6.0J</firmware>
 	<type>1</type>
 	<card>1</card>
@@ -45308,38 +45308,325 @@
 </release>
 <release>
 	<id>2518</id>
-	<name>Luigi's Mansion</name>
+	<name>Mario &amp; Luigi: Bowsers Inside Story + Bowser Jrs Journey</name>
 	<publisher>Nintendo</publisher>
-	<region>USA</region>
-	<languages>en</languages>
-	<group>x</group>
-	<imagesize>16384</imagesize>
-	<serial>CTR-BGNE</serial>
-	<titleid>00040000001D1900</titleid>
-	<imgcrc>E89506B6</imgcrc>
-	<filename>v-ykwd</filename>
-	<releasename>Luigi-Mansion</releasename>
-	<trimmedsize>1831104512</trimmedsize>
+	<region>EUR</region>
+	<languages>en,fr,de,it,es</languages>
+	<group>LiGHTFORCE</group>
+	<imagesize>8192</imagesize>
+	<serial>CTR-A3RP</serial>
+	<titleid>00040000001D1500</titleid>
+	<imgcrc>092C1497</imgcrc>
+	<filename>lfc-a3rp</filename>
+	<releasename>Mario_and_Luigi-Bowsers_Inside_Story_Plus_Bowser_Jrs_Journey_EUR_MULTI5_3DS-LiGHTFORCE</releasename>
+	<trimmedsize>1073741824</trimmedsize>
 	<firmware>11.6.0E</firmware>
 	<type>1</type>
 	<card>1</card>
 </release>
-
 <release>
-	<id>2518</id>
-	<name>New Super Mario Bros 2. Golden Ed.</name>
+	<id>2519</id>
+	<name>Mario &amp; Luigi: Bowsers Inside Story + Bowser Jrs Journey</name>
 	<publisher>Nintendo</publisher>
 	<region>USA</region>
 	<languages>en</languages>
-	<group>x</group>
-	<imagesize>16384</imagesize>
-	<serial>CTR-ABEE</serial>
-	<titleid>0004000000137E00</titleid>
-	<imgcrc>E89506B6</imgcrc>
-	<filename>v-ykwd</filename>
-	<releasename>Luigi-Mansion</releasename>
-	<trimmedsize>1831104512</trimmedsize>
+	<group>VENOM</group>
+	<imagesize>8192</imagesize>
+	<serial>CTR-A3RE</serial>
+	<titleid>00040000001D1400</titleid>
+	<imgcrc>A2C73656</imgcrc>
+	<filename>v-mlbisp</filename>
+	<releasename>Mario_and_Luigi_Bowsers_Inside_Story_Plus_Bowser_Jrs_Journey_3DS-VENOM</releasename>
+	<trimmedsize>1073741824</trimmedsize>
+	<firmware>11.6.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2520</id>
+	<name>Ruīji Manshon [Rev 1]</name>
+	<publisher>Nintendo</publisher>
+	<region>JPN</region>
+	<languages>ja</languages>
+	<group>HR</group>
+	<imagesize>4096</imagesize>
+	<serial>CTR-BGNJ</serial>
+	<titleid>00040000001D1800</titleid>
+	<imgcrc>B04EC671</imgcrc>
+	<filename>hr-luiman</filename>
+	<releasename>Luigi_Mansion_JPN_3DS-HR</releasename>
+	<trimmedsize>536870912</trimmedsize>
+	<firmware>11.8.0J</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2521</id>
+	<name>Luigis Mansion</name>
+	<publisher>Nintendo</publisher>
+	<region>EUR</region>
+	<languages>en,fr,de,it,es</languages>
+	<group>LiGHTFORCE</group>
+	<imagesize>4096</imagesize>
+	<serial>CTR-BGNP</serial>
+	<titleid>00040000001D1A00</titleid>
+	<imgcrc>50624862</imgcrc>
+	<filename>lfc-bgnp</filename>
+	<releasename>Luigis_Mansion_EUR_MULTI5_3DS-LiGHTFORCE</releasename>
+	<trimmedsize>536870912</trimmedsize>
 	<firmware>11.6.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2522</id>
+	<name>Luigis Mansion</name>
+	<publisher>Nintendo</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>VENOM</group>
+	<imagesize>4096</imagesize>
+	<serial>CTR-BGNE</serial>
+	<titleid>00040000001D1900</titleid>
+	<imgcrc>535A96F2</imgcrc>
+	<filename>v-luigm1</filename>
+	<releasename>Luigis_Mansion_3DS-VENOM</releasename>
+	<trimmedsize>536870912</trimmedsize>
+	<firmware>11.6.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2523</id>
+	<name>Kirbys Extra Epic Yarn</name>
+	<publisher>Nintendo</publisher>
+	<region>USA</region>
+	<languages>en,fr,es</languages>
+	<group>SUXXORS</group>
+	<imagesize>16384</imagesize>
+	<serial>CTR-BE4E</serial>
+	<titleid>00040000001D1E00</titleid>
+	<imgcrc>A4C82377</imgcrc>
+	<filename>sxs-keey</filename>
+	<releasename>Kirbys_Extra_Epic_Yarn_USA_3DS-SUXXORS</releasename>
+	<trimmedsize>2147483648</trimmedsize>
+	<firmware>11.8.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2524</id>
+	<name>Kirbys Extra Epic Yarn</name>
+	<publisher>Nintendo</publisher>
+	<region>EUR</region>
+	<languages>en,fr,de,it,es</languages>
+	<group>TiNGO</group>
+	<imagesize>16384</imagesize>
+	<serial>CTR-BE4P</serial>
+	<titleid>00040000001D1F00</titleid>
+	<imgcrc>757C6E57</imgcrc>
+	<filename>tin-be4p</filename>
+	<releasename>Kirbys.Extra.Epic.Yarn.EUR.MULTi5.3DS-TiNGO</releasename>
+	<trimmedsize>2147483648</trimmedsize>
+	<firmware>11.8.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2525</id>
+	<name>Keito no Kirby Plus [Rev 1]</name>
+	<publisher>Nintendo</publisher>
+	<region>JPN</region>
+	<languages>ja</languages>
+	<group>HR</group>
+	<imagesize>16384</imagesize>
+	<serial>CTR-BE4J</serial>
+	<titleid>00040000001D1200</titleid>
+	<imgcrc>E94AD07C</imgcrc>
+	<filename>hr-be4j</filename>
+	<releasename>Keito_no_Kirby_Plus_JPN_3DS-HR</releasename>
+	<trimmedsize>2147483648</trimmedsize>
+	<firmware>11.9.0J</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2526</id>
+	<name>Etrian Odyssey Nexus</name>
+	<publisher>Atlus</publisher>
+	<region>EUR</region>
+	<languages>en</languages>
+	<group>LiGHTFORCE</group>
+	<imagesize>8192</imagesize>
+	<serial>CTR-BZMP</serial>
+	<titleid>00040000001D5200</titleid>
+	<imgcrc>C0FB0A5F</imgcrc>
+	<filename>lfc-bzmp</filename>
+	<releasename>Etrian_Odyssey_Nexus_EUR_3DS-LiGHTFORCE</releasename>
+	<trimmedsize>1073741824</trimmedsize>
+	<firmware>11.6.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2527</id>
+	<name>Etrian Odyssey Nexus</name>
+	<publisher>Atlus</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>SUXXORS</group>
+	<imagesize>8192</imagesize>
+	<serial>CTR-BZME</serial>
+	<titleid>00040000001D4E00</titleid>
+	<imgcrc>EC0A3EB1</imgcrc>
+	<filename>sxs-eonu</filename>
+	<releasename>Etrian_Odyssey_Nexus_USA_3DS-SUXXORS</releasename>
+	<trimmedsize>1073741824</trimmedsize>
+	<firmware>11.6.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2528</id>
+	<name>3in1 Horses</name>
+	<publisher>TREVA Entertainment</publisher>
+	<region>EUR</region>
+	<languages>en,fr,de,it,es,nl</languages>
+	<group>PUSSYCAT</group>
+	<imagesize>2048</imagesize>
+	<serial>CTR-BRZP</serial>
+	<titleid>00040000001BF900</titleid>
+	<imgcrc>c398e321</imgcrc>
+	<filename>cat-brzp</filename>
+	<releasename>3in1_Horses_EUR_MULTi6_3DS-PUSSYCAT</releasename>
+	<trimmedsize>146436096</trimmedsize>
+	<firmware>11.2.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2529</id>
+	<name>Jake Hunter Detective Story: Ghost of the Dusk</name>
+	<publisher>Aksys Games</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>VENOM</group>
+	<imagesize>4096</imagesize>
+	<serial>CTR-BG9E</serial>
+	<titleid>00040000001CBC00</titleid>
+	<imgcrc>28671de0</imgcrc>
+	<filename>v-jhgotd</filename>
+	<releasename>Jake_Hunter_Detective_Story_Ghost_of_the_Dusk_3DS-VENOM</releasename>
+	<trimmedsize>443723776</trimmedsize>
+	<firmware>11.6.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2530</id>
+	<name>Yo-Kai Watch 3</name>
+	<publisher>Nintendo</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>SUXXORS</group>
+	<imagesize>32768</imagesize>
+	<serial>CTR-ALZE</serial>
+	<titleid>00040000001D6700</titleid>
+	<imgcrc>3f79ebb5</imgcrc>
+	<filename>sxs-ykw3</filename>
+	<releasename>YoKai_Watch_3_USA_3DS-SUXXORS</releasename>
+	<trimmedsize>3592331264</trimmedsize>
+	<firmware>11.8.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2531</id>
+	<name>Yo-Kai Watch 3</name>
+	<publisher>Nintendo</publisher>
+	<region>EUR</region>
+	<languages>en,fr,de,it,es</languages>
+	<group>TRSI</group>
+	<imagesize>32768</imagesize>
+	<serial>CTR-ALZP</serial>
+	<titleid>00040000001D6800</titleid>
+	<imgcrc>943a4913</imgcrc>
+	<filename>trsi-alzp</filename>
+	<releasename>Yo-Kai_Watch_3_EUR_MULTi5_3DS-TRSI</releasename>
+	<trimmedsize>3602268160</trimmedsize>
+	<firmware>11.8.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2532</id>
+	<name>Persona Q2 - New Cinema Labyrinth</name>
+	<publisher>Atlus/SEGA</publisher>
+	<region>JPN</region>
+	<languages>ja</languages>
+	<group>HR</group>
+	<imagesize>32768</imagesize>
+	<serial>CTR-AQ2J</serial>
+	<titleid>00040000001CBE00</titleid>
+	<imgcrc>0083c83b</imgcrc>
+	<filename>hr-pq2</filename>
+	<releasename>Persona_Q2_New_Cinema_Labyrinth_JPN_3DS-HR</releasename>
+	<trimmedsize>2892267520</trimmedsize>
+	<firmware>11.6.0J</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2533</id>
+	<name>Persona Q2 - New Cinema Labyrinth</name>
+	<publisher>Deep Silver</publisher>
+	<region>EUR</region>
+	<languages>en</languages>
+	<group>TiNGO</group>
+	<imagesize>32768</imagesize>
+	<serial>CTR-AQ2P</serial>
+	<titleid>00040000001D7600</titleid>
+	<imgcrc>2e2a7227</imgcrc>
+	<filename>tin-aq2p</filename>
+	<releasename>Persona.Q2.New.Cinema.Labyrinth.3DS-TiNGO</releasename>
+	<trimmedsize>2899566592</trimmedsize>
+	<firmware>11.8.0E</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2534</id>
+	<name>Persona Q2 - New Cinema Labyrinth</name>
+	<publisher>Atlus/SEGA</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>SUXXORS</group>
+	<imagesize>32768</imagesize>
+	<serial>CTR-AQ2E</serial>
+	<titleid>00040000001D7100</titleid>
+	<imgcrc>bbc7557e</imgcrc>
+	<filename>sxs-pq2n</filename>
+	<releasename>Persona_Q2_New_Cinema_Labyrinth_USA_3DS-SUXXORS</releasename>
+	<trimmedsize>2890895360</trimmedsize>
+	<firmware>11.8.0U</firmware>
+	<type>1</type>
+	<card>1</card>
+</release>
+<release>
+	<id>2535</id>
+	<name>Atooi Collection</name>
+	<publisher>Limited Run Games</publisher>
+	<region>USA</region>
+	<languages>en</languages>
+	<group>JRP</group>
+	<imagesize>8192</imagesize>
+	<serial>CTR-AUTE</serial>
+	<titleid>00040000001D9300</titleid>
+	<imgcrc>3bc5af55</imgcrc>
+	<filename>jrp-ac3ds</filename>
+	<releasename>Atooi.Collection_3DS-JRP</releasename>
+	<trimmedsize>537051136</trimmedsize>
+	<firmware>11.9.0U</firmware>
 	<type>1</type>
 	<card>1</card>
 </release>
